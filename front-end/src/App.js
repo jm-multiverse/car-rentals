@@ -1,8 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Stack from "react-bootstrap/Stack";
 import SearchBar from "./components/SearchBar";
+import { useCars } from "./contexts/CarsContext";
+import CarCard from "./components/CarCard";
 
 function App() {
+  const { cars } = useCars();
+
   return (<>
     <Container className="my-4">
       <Stack direction='horizontal' gap='2' className='mb-4'>
@@ -18,6 +22,17 @@ function App() {
         }}
       >
         {/* Car Cards List */}
+        {cars.map(car => {
+          return (
+            <CarCard
+              key={car.id}
+              name={car.name}
+              description={car.description}
+              price={car.price}
+              onViewCarClick={() => { }}
+            />
+          )
+        })}
       </div>
     </Container>
 

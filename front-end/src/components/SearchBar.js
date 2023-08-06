@@ -1,8 +1,6 @@
-import Button from "react-bootstrap/Button";
-
 function SearchBar() {
   return (<>
-    <form className="d-flex">
+    <form className="d-flex mb-3">
       <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
       <button className="btn btn-outline-success" type="submit">Search</button>
     </form>
