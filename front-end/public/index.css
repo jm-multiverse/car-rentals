@@ -1,0 +1,10 @@
+.car-card {
+  transition: all 0.15s ease-in-out;
+}
+
+.car-card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  border: 1px solid #000000;
+
+}

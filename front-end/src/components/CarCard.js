@@ -8,7 +8,7 @@ export default function CarCard({
   onViewCarClick,
 }) {
   return (
-    <Card>
+    <Card className='car-card' onClick={onViewCarClick}>
       <Card.Body>
         <Card.Title className='d-flex justify-content-between align-items-baseline mb-3'>
           <div className="me-2">{name}</div>

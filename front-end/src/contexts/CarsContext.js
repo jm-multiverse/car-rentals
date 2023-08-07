@@ -74,6 +74,7 @@ export const CarsProvider = ({ children }) => {
 
 
   function getCar(id) {
+    return cars.find(car => car.id === id)
   }
 
   function addCar(id) {
@@ -84,6 +85,7 @@ export const CarsProvider = ({ children }) => {
 
   return <CarsContext.Provider value={{
     cars,
+    getCar,
   }} >
     {children}
   </CarsContext.Provider>
