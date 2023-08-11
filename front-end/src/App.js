@@ -35,9 +35,7 @@ function App() {
           return (
             <CarCard
               key={car.id}
-              name={car.name}
-              description={car.description}
-              price={car.price}
+              carId={car.id}
               onViewCarClick={() => { handleViewCarClick(car.id) }}
             />
           )
