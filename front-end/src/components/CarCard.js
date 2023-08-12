@@ -13,7 +13,6 @@ export default function CarCard({
     <Card className='car-card' onClick={onViewCarClick}>
       <Card.Body>
         <Card.Title className='d-flex justify-content-between align-items-baseline mb-3'>
-          {/* <img src={image} alt={`${make} ${model}`} className='car-card-image' /> */}
           <div className="me-2">{make} {model}</div>
           <div className="d-flex align-items-baseline fw-normal">
             {currencyFormatter.format(pricePerDay)}

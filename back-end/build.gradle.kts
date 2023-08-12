@@ -35,6 +35,7 @@ dependencies {
 	implementation("com.google.code.gson:gson:2.10.1")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")
+	testImplementation("org.apache.httpcomponents.client5:httpclient5")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
