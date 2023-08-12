@@ -15,6 +15,7 @@ export const CarsProvider = ({ children }) => {
       .then(res => res.json())
       .then(data => {
         setCars(data)
+        console.log(data)
       })
   }, [])
 
