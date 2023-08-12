@@ -18,9 +18,9 @@ function App() {
 
   return (<>
     <Container className="my-4">
-      <Stack direction='horizontal' gap='2' className='mb-5 justify-content-between align-items-baseline'>
-        <h1 className='me-auto'>Car Rentals</h1>
-        <SearchBar />
+      <Stack direction='horizontal' gap='5' className='mb-5 justify-content-between align-items-end'>
+        <h1 className='my-0'>Car Rentals</h1>
+        <SearchBar className='searchbar' />
       </Stack>
       <div
         style={{
