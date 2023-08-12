@@ -7,6 +7,7 @@ import io.micrometer.core.instrument.MeterRegistry
 import io.micrometer.core.instrument.Timer
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import java.util.*
 
 @RestController
 @RequestMapping("/api/car")
@@ -23,6 +24,10 @@ class CarController(
         .register(meterRegistry)
 
     @GetMapping
+    fun getCarsByPage(@RequestParam page: Optional<Int>, @RequestParam size: Optional<Int>): ResponseEntity<Any> =
+        ResponseEntity.ok(service.getCarsByPage(page.orElse(0), size.orElse(10)))
+
+    @GetMapping("/all")
     fun getCars(): ResponseEntity<Any> =
         ResponseEntity.ok(service.getCars())
 
