@@ -13,44 +13,32 @@ export default function CarCard({
 
   return (
     <Card className='p-4' onClick={onViewCarClick}>
-      <div className='d-flex flex-column'>
-        <div className='d-flex justify-content-between align-items-baseline'>
-          <h3 className='fw-normal mb-0'>{make} {model}</h3>
-          <div className='text-end no-wrap'>
+      <div className='d-flex'>
+        <div className="car-thumbnail-container me-5">
+          <img src={getRandomCarThumbnail()} alt={`${make} ${model}`}
+            className='w-100 h-100 object-fit-contain'
+          />
+        </div>
+        <div className=''>
+          <h3 className='fw-normal'>{make} {model}</h3>
+          <h5 className='fw-normal mb-1'>{carType}</h5>
+          <div className=''>Seats: {capacity}</div>
+          <div className=''>Color: {color}</div>
+          <div className=''>Year: {manufacturingYear}</div>
+          <div className=''>{transmission}</div>
+          <div className=''>{fuelType}</div>
+        </div>
+        <div className="d-flex flex-column flex-grow-1 justify-content-between">
+          <div className='text-end no-wrap ms-auto mt-1'>
             <h5 className='fw-normal mb-0'>{currencyFormatter.format(pricePerDay)}</h5>
             <div className='text-muted'>per day</div>
           </div>
-        </div>
-        <div className="container-sm d-flex justify-content-center">
-          <img src={getRandomCarThumbnail()} alt={`${make} ${model}`}
-            className='w-50'
-          />
-        </div>
-      </div>
-      <hr />
-      <div className='d-flex flex-column'>
-        <div className='d-flex justify-content-between flex-grow-1 me-4'>
-          <div>
-            <div className='text-muted'>Year</div>
-            <div>{manufacturingYear}</div>
-          </div>
-          <div>
-            <div className='text-muted'>Capacity</div>
-            <div>{capacity}</div>
-          </div>
-          <div>
-            <div className='text-muted'>Transmission</div>
-            <div>{transmission}</div>
-          </div>
-          <div>
-            <div className='text-muted'>Fuel</div>
-            <div>{fuelType}</div>
-          </div>
-          <div>
-            <div className='text-muted'>Type</div>
-            <div>{carType}</div>
+          <div className='action-buttons-container d-flex gap-2 justify-content-end'>
+            <Button variant='outline-primary' className='mt-auto reserve-button'>Reserve</Button>
+            <Button variant='outline-secondary' className='mt-auto'>Save</Button>
           </div>
         </div>
+
       </div>
     </Card>
   )

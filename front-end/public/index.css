@@ -12,3 +12,14 @@
 .no-wrap {
   white-space: nowrap;
 }
+
+.car-thumbnail-container {
+  height: 200px;
+  width: 350px;
+  overflow: hidden;
+}
+
+.reserve-button {
+  width: 120px;
+
+}
