@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from "react"
 import carData from "./carData.json" // Mock data, not from API
-import carImage1 from '../car-photos-thumbnails/thumbnail-1.jpg'
-import carImage2 from '../car-photos-thumbnails/thumbnail-2.jpg'
-import carImage3 from '../car-photos-thumbnails/thumbnail-3.jpg'
-import carImage4 from '../car-photos-thumbnails/thumbnail-4.jpg'
-import carImage5 from '../car-photos-thumbnails/thumbnail-5.png'
-import carImage6 from '../car-photos-thumbnails/thumbnail-6.jpg'
-import carImage7 from '../car-photos-thumbnails/thumbnail-7.jpg'
-import carImage8 from '../car-photos-thumbnails/thumbnail-8.jpg'
-import carImage9 from '../car-photos-thumbnails/thumbnail-9.jpg'
-import carImage10 from '../car-photos-thumbnails/thumbnail-10.jpg'
+import carImage1 from '../assets/car-photos-thumbnails/thumbnail-1.jpg'
+import carImage2 from '../assets/car-photos-thumbnails/thumbnail-2.jpg'
+import carImage3 from '../assets/car-photos-thumbnails/thumbnail-3.jpg'
+import carImage4 from '../assets/car-photos-thumbnails/thumbnail-4.jpg'
+import carImage5 from '../assets/car-photos-thumbnails/thumbnail-5.png'
+import carImage6 from '../assets/car-photos-thumbnails/thumbnail-6.jpg'
+import carImage7 from '../assets/car-photos-thumbnails/thumbnail-7.jpg'
+import carImage8 from '../assets/car-photos-thumbnails/thumbnail-8.jpg'
+import carImage9 from '../assets/car-photos-thumbnails/thumbnail-9.jpg'
+import carImage10 from '../assets/car-photos-thumbnails/thumbnail-10.jpg'
 
 const CarsContext = React.createContext()
 // 

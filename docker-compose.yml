@@ -1,0 +1,19 @@
+version: '3'
+services:
+  front-end:
+    image: front-end
+    build:
+      context: ./front-end
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    container_name: front-end
+
+  back-end:
+    image: back-end
+    build:
+      context: ./back-end
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    container_name: back-end
