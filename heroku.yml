@@ -1,11 +1,9 @@
 build:
   docker:
     web:
-      context: ./front-end
-      dockerfile: Dockerfile
+      dockerfile: /front-end/Dockerfile
     worker:
-      context: ./back-end
-      dockerfile: Dockerfile
+      dockerfile: /back-end/Dockerfile
 
   config:
     JVM_BUILD_TASK: './back-end/gradlew build'
