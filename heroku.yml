@@ -1,12 +1,16 @@
 build:
   docker:
-    web: ./front-end/Dockerfile
-    worker: ./back-end/Dockerfile
+    web:
+      context: ./front-end
+      dockerfile: Dockerfile
+    worker:
+      context: ./back-end
+      dockerfile: Dockerfile
 
   config:
-    JVM_BUILD_TASK: './back-end/gradlew build'  # Pre-build the back-end using Gradle
+    JVM_BUILD_TASK: './back-end/gradlew build'
 
 release:
-  image: web  # Use the image built from the front-end Dockerfile
+  image: web
   command:
-    - ./back-end/gradlew bootRun  # Run the back-end app
+    - java -jar app.jar
