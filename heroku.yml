@@ -2,5 +2,11 @@ build:
   docker:
     web: ./front-end/Dockerfile
     worker: ./back-end/Dockerfile
-run:
-  web: docker compose up
+
+  config:
+    JVM_BUILD_TASK: './back-end/gradlew build'  # Pre-build the back-end using Gradle
+
+release:
+  image: web  # Use the image built from the front-end Dockerfile
+  command:
+    - ./back-end/gradlew bootRun  # Run the back-end app
