@@ -1,0 +1,6 @@
+build:
+  docker:
+    web: ./front-end/Dockerfile
+    worker: ./back-end/Dockerfile
+run:
+  web: docker compose up
