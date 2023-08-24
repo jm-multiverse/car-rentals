@@ -4,11 +4,3 @@ build:
       dockerfile: /front-end/Dockerfile
     worker:
       dockerfile: /back-end/Dockerfile
-
-  config:
-    JVM_BUILD_TASK: './back-end/gradlew build'
-
-release:
-  image: web
-  command:
-    - java -jar app.jar
